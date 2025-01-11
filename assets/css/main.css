@@ -1,0 +1,468 @@
+/* Importação do arquivo normalize.css para normalizar os estilos, caso necessário (comentado) */
+/*@import url("./normalize.css");*/
+
+/* Configuração global para todos os elementos */
+* {
+    box-sizing: border-box;
+    /* Define que o padding e a borda serão incluídos nas dimensões dos elementos */
+}
+
+/* Estilos para o corpo da página */
+body {
+    background-color: #202124;
+    /* Cor de fundo escura */
+    font-family: 'Roboto';
+    /* Fonte padrão */
+    font-weight: 500;
+    /* Peso da fonte */
+    font-size: 15px;
+    /* Tamanho da fonte */
+    display: flex;
+    /* Usando flexbox para layout */
+    flex-direction: column;
+    /* Organizando os elementos na vertical */
+    justify-content: space-between;
+    /* Espaço entre os elementos principais */
+    min-height: 100vh;
+    /* Garantir que a altura mínima da tela seja 100% da altura da janela */
+}
+
+/* Estilos para o logo */
+#Logo {
+    width: 151px;
+    /* Largura do logo */
+    height: 51px;
+    /* Altura do logo */
+}
+
+/* Estilos para listas (ul) */
+ul {
+    list-style: none;
+    /* Remove os marcadores das listas */
+    margin: 0;
+    /* Remove a margem */
+    padding: 0;
+    /* Remove o padding */
+    display: flex;
+    /* Usando flexbox para organizar os itens em linha */
+    gap: 20px;
+    /* Espaçamento entre os itens */
+}
+
+/* Estilos para o cabeçalho */
+header {
+    display: flex;
+    /* Usando flexbox para o layout do cabeçalho */
+    padding: 10px;
+    /* Padding interno */
+    justify-content: space-between;
+    /* Espaçamento entre os itens do cabeçalho */
+    flex-direction: row-reverse;
+    /* Inverte a ordem dos itens na linha */
+
+    /* Estilos específicos para o botão dentro do cabeçalho */
+    & button {
+        background: none;
+        /* Remove o fundo */
+        border: none;
+        /* Remove a borda */
+        outline: none;
+        /* Remove o contorno */
+    }
+
+    /* Estilos para o conteúdo dentro do header > div */
+    &>div {
+        display: flex;
+        /* Organiza os itens em linha */
+        align-items: center;
+        /* Alinha os itens verticalmente */
+        gap: 10px;
+        /* Espaçamento entre os itens */
+    }
+
+    /* Estilos para os itens da lista dentro do header */
+    & li {
+        padding-bottom: 15px 0;
+        /* Padding abaixo dos itens */
+    }
+
+    /* Estilos para o link ativo dentro do menu */
+    & .active {
+        border-bottom: #4285F4 1px solid;
+        /* Adiciona uma linha azul embaixo do item ativo */
+
+        /* Estilos para os links dentro de .active */
+        & a {
+            color: #4285F4;
+            /* Cor azul do link ativo */
+            padding: 5px;
+            /* Padding interno */
+        }
+    }
+
+    /* Estilos para os links no cabeçalho */
+    & a {
+        text-transform: uppercase;
+        /* Transforma o texto para maiúsculas */
+    }
+
+    /* Estilos para as listas de navegação no cabeçalho */
+    &>ul {
+        display: flex;
+        /* Usando flexbox para os itens de navegação */
+        align-items: center;
+        /* Alinha os itens no centro */
+    }
+
+    /* Estilos para a navegação dentro de header */
+    & nav ul {
+        display: flex;
+        /* Organiza os itens de navegação em linha */
+        justify-content: flex-end;
+        /* Alinha os itens à direita */
+        align-items: center;
+        /* Alinha os itens verticalmente */
+        margin: 20px;
+        /* Margem em torno da lista */
+    }
+
+    /* Estilos para itens individuais da lista de navegação */
+    & li {
+        display: flex;
+        /* Organiza os itens em linha */
+        justify-content: center;
+        /* Centraliza os itens */
+        align-items: center;
+        /* Alinha os itens verticalmente */
+    }
+
+    /* Esconde os links com a classe .link-desktop em dispositivos móveis */
+    & .link-desktop {
+        display: none;
+    }
+}
+
+/* Estilos para o conteúdo principal (main) */
+main {
+    display: flex;
+    /* Usando flexbox */
+    justify-content: center;
+    /* Centraliza o conteúdo */
+    align-items: stretch;
+    /* Estica os itens */
+    flex-direction: column;
+    /* Organiza os itens na vertical */
+
+    /* Estilos para as listas dentro do main */
+    &>ul {
+        margin: 20px;
+        /* Margem ao redor da lista */
+        display: flex;
+        /* Usando flexbox */
+        flex-direction: column;
+        /* Organiza os itens na vertical */
+
+        /* Estilos para o item de cabeçalho dentro da lista */
+        & li.header {
+            display: flex;
+            /* Organiza os itens em linha */
+            justify-content: space-between;
+            /* Espaço entre os itens */
+            font-size: 23px;
+            /* Tamanho da fonte */
+            font-family: 'OpenSans';
+            /* Fonte para o título */
+            font-weight: initial;
+            /* Peso da fonte */
+            color: #e8eaed;
+            /* Cor do texto */
+            border-bottom: none;
+            /* Remove a borda */
+        }
+
+        /* Estilos para os itens da lista */
+        & li {
+            display: flex;
+            /* Usando flexbox para os itens */
+            gap: 10px;
+            /* Espaçamento entre os itens */
+            padding-top: 20px;
+            /* Padding superior */
+            color: #e8eaed;
+            /* Cor do texto */
+            font-family: OpenSans;
+            /* Fonte do texto */
+        }
+
+        /* Estilos para os itens que não são o header (após o primeiro item) */
+        & li:not(.header)+li {
+            border-top: #929496 1px solid;
+            /* Borda superior */
+        }
+    }
+
+    /* Estilos para o conteúdo dentro do main > div */
+    &>div {
+        display: flex;
+        /* Usando flexbox */
+        flex-direction: column;
+        /* Organiza os itens na vertical */
+        align-items: center;
+        /* Alinha os itens ao centro */
+        margin-top: 20px;
+        /* Margem superior */
+    }
+
+    /* Estilos para o formulário de pesquisa */
+    & form {
+        display: flex;
+        /* Usando flexbox */
+        flex-direction: column;
+        /* Organiza os itens na vertical */
+        align-items: center;
+        /* Alinha os itens ao centro */
+
+        /* Estilos para a área de ações (botões) dentro do formulário */
+        & .actions {
+            display: flex;
+            /* Usando flexbox */
+            gap: 14px;
+            /* Espaçamento entre os botões */
+
+            /* Estilos para os botões dentro de .actions */
+            & button {
+                background-color: #303134;
+                /* Cor de fundo */
+                border-radius: 4px;
+                /* Borda arredondada */
+                width: 141px;
+                /* Largura do botão */
+                height: 36px;
+                /* Altura do botão */
+                border: 1px solid #303134;
+                /* Borda do botão */
+                cursor: pointer;
+                /* Cursor de pointer ao passar o mouse */
+                color: #e8eaed;
+                /* Cor do texto no botão */
+
+                /* Estilos para o botão quando hover (passando o mouse sobre) */
+                &:hover {
+                    box-shadow: 0 1px 1px rgb(61, 61, 62);
+                    /* Sombra no botão */
+                    border: 1px solid #8d9096;
+                    /* Cor da borda ao passar o mouse */
+                }
+            }
+        }
+
+        /* Estilos para o primeiro <div> dentro do formulário */
+        &>div:nth-child(1) {
+            min-width: 250px;
+            /* Largura mínima */
+            height: 38px;
+            /* Altura */
+            margin: 29px;
+            /* Margem */
+            border: #4D5156 1px solid;
+            /* Cor da borda */
+            border-radius: 25px;
+            /* Borda arredondada */
+            display: flex;
+            /* Usando flexbox */
+            align-items: center;
+            /* Alinha os itens verticalmente */
+            background-color: #4D5156;
+            /* Cor de fundo */
+            text-shadow: #ffffff;
+            /* Sombra no texto */
+            justify-content: center;
+            /* Centraliza os itens */
+            align-items: center;
+            /* Alinha os itens ao centro */
+
+            /* Esconde os ícones */
+            & .input-icons {
+                display: none;
+            }
+
+            /* Estilos para os filhos dentro do <div> */
+            &>* {
+                min-width: px;
+                /* Largura mínima */
+                display: flex;
+                /* Usando flexbox */
+                justify-content: center;
+                /* Alinha os itens horizontalmente */
+                align-items: center;
+                /* Alinha os itens verticalmente */
+                border-radius: 20px;
+                /* Borda arredondada */
+                height: 19px;
+                /* Altura */
+                background-color: #4D5156;
+                /* Cor de fundo */
+            }
+
+            /* Estilos para o campo de input */
+            & input {
+                border: none;
+                /* Remove a borda */
+                outline: none !important;
+                /* Remove o contorno */
+                flex: 1;
+                /* Flexível, ocupa todo o espaço disponível */
+                width: 80vw;
+                /* Largura do campo */
+            }
+        }
+    }
+}
+
+/* Estilos para links */
+a {
+    text-decoration: none;
+    /* Remove a decoração de sublinhado dos links */
+    color: rgb(255, 255, 255);
+    /* Cor do texto dos links */
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #171717;
+    /* Cor de fundo do rodapé */
+    width: 100%;
+    /* Largura total */
+
+    /* Estilos para os links dentro do rodapé */
+    & a {
+        color: rgb(232, 232, 232);
+        /* Cor dos links no rodapé */
+    }
+
+    /* Estilos para o parágrafo dentro do rodapé */
+    & p {
+        padding: 16px;
+        /* Padding interno */
+        margin: 1px;
+        /* Margem */
+        color: rgb(232, 221, 221);
+        /* Cor do texto do parágrafo */
+    }
+
+    /* Estilos para a navegação dentro do rodapé */
+    & nav {
+        border-top: #474747 0.5px solid;
+        /* Borda superior */
+        padding: 18px;
+        /* Padding ao redor da navegação */
+
+        /* Esconde as listas de navegação */
+        & ul {
+            display: none;
+        }
+    }
+}
+
+/* Estilos para telas maiores que 992px (desktop) */
+@media(min-width: 992px) {
+    body {
+        font-family: 'Arial';
+        /* Fonte padrão para desktop */
+        font-weight: initial;
+        /* Peso inicial da fonte */
+    }
+
+    /* Esconde a classe hide-on-desktop em telas grandes */
+    & .hide-on-desktop {
+        display: none;
+    }
+
+    /* Estilos para o hover nos links */
+    a:hover {
+        text-decoration: underline;
+        /* Sublinhado ao passar o mouse */
+    }
+
+    /* Estilos para o cabeçalho e navegação em telas grandes */
+    header {
+        & nav ul {
+            & .link-desktop {
+                display: flex;
+                /* Exibe os links desktop */
+            }
+        }
+    }
+
+    /* Ajustes nos ícones e logos */
+    #foto {
+        height: 31px;
+        display: flex;
+    }
+
+    #lupa {
+        width: 24px;
+        height: 24px;
+        border: none;
+        margin-left: 20px;
+    }
+
+    #mic {
+        width: 24px;
+        height: 24px;
+        border: none;
+        margin-right: 10px;
+    }
+
+    #photo {
+        width: 24px;
+        height: 24px;
+        border: 4px;
+        border-radius: 25px;
+        margin-right: 10px;
+    }
+
+    #teclado {
+        width: 18px;
+        height: 15px;
+        border: none;
+        margin-right: 15px;
+    }
+
+    #Logo {
+        width: 272px;
+        height: 92px;
+    }
+
+    main {
+        position: relative;
+        top: -140px;
+        left: initial;
+
+        & form>div:nth-child(1) {
+            min-width: 585px;
+            height: 48px;
+
+            .input-icons {
+                display: flex;
+                border: none;
+                border-radius: 20px;
+            }
+
+            & input {
+                width: initial;
+            }
+        }
+    }
+
+    footer {
+        & nav {
+            display: flex;
+            justify-content: space-between;
+
+            & ul {
+                display: flex;
+            }
+        }
+    }
+}

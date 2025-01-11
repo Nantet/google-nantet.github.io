@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    src: url("../fonts/roboto/static/RobotoCondensed-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url("../fonts/open_sans/Open_Sans/static/OpenSans-Regular.ttf");
+}
