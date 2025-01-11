@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+
+    <!-- Links para os arquivos CSS -->
+    <link rel="stylesheet" href="./assets/css/normalize.css"> <!-- Normalização de estilos -->
+    <link rel="stylesheet" href="./assets/css/fonts.css"> <!-- Fontes personalizadas -->
+    <link rel="stylesheet" href="./assets/css/main.css"> <!-- Estilos principais -->
+</head>
+
+<body>
+    <!-- Início do cabeçalho (header) -->
+    <header>
+        <!-- Menu de navegação -->
+        <nav>
+            <ul>
+                <!-- Ícone de notificação visível somente em telas pequenas -->
+                <li class="hide-on-desktop"><img src="assets/svg/notification.svg" alt="notification" /></li>
+
+                <!-- Links para Gmail e Imagens visíveis em telas grandes -->
+                <li class="link-desktop"><a href="https://mail.google.com"> Gmail</a></li>
+                <li class="link-desktop"><a href="https://google.com/imghp">Imagens</a></li>
+
+                <!-- Ícones de pontos e foto do usuário -->
+                <li><img src="assets/svg/pontos.svg" alt="Pontos" id="pontos" /></li>
+                <li><img src="assets/img/Mask group.png" alt="Foto" id="foto" /></li>
+            </ul>
+        </nav>
+
+        <!-- Menu de navegação que é escondido em dispositivos desktop -->
+        <div class="hide-on-desktop">
+            <!-- Botão de menu -->
+            <button id="btn-menu">
+                <img src="assets/svg/menu.svg" alt="menu" />
+            </button>
+
+            <!-- Links do menu para dispositivos móveis -->
+            <ul>
+                <li class="active"><a href="#">Todas</a></li>
+                <li><a href="#">Imagens</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Início do conteúdo principal -->
+    <main>
+        <div>
+            <!-- Logo do Google -->
+            <img src="assets/img/Logo.png" alt="Logo Google" id="Logo" />
+
+            <!-- Formulário de busca -->
+            <form action="https:/google.com/search">
+                <div>
+                    <!-- Ícone de lupa para busca -->
+                    <div>
+                        <img src="assets/svg/lupa.svg" alt="Lupa" id="lupa" />
+                    </div>
+
+                    <!-- Campo de busca -->
+                    <input type="search" name="q" />
+
+                    <!-- Ícones adicionais (teclado, microfone, câmera) -->
+                    <div class="input-icons">
+                        <img src="assets/img/teclado 1.png" alt="Teclado" id="teclado" />
+                    </div>
+
+                    <div class="input-icons">
+                        <img src="assets/svg/microfone.svg" alt="Microfone" id="mic" />
+                    </div>
+
+                    <div class="input-icons">
+                        <img src="assets/svg/camera.svg" alt="camera" id="photo" />
+                    </div>
+                </div>
+
+                <!-- Botões de ação do formulário -->
+                <div class="actions">
+                    <button type="submit">Pesquisa Google</button> <!-- Botão para pesquisa -->
+                    <button id="estou-com-sorte" type="button">Estou com sorte</button>
+                    <!-- Botão para "Estou com sorte" -->
+                </div>
+            </form>
+        </div>
+
+        <!-- Lista de tendências (Pesquisa em alta) visível em dispositivos móveis -->
+        <ul class="hide-on-desktop">
+            <li class="header">
+                <span>Pesquisa em alta</span>
+                <img src="assets/svg/dots.svg" alt="Dots" />
+            </li>
+
+            <!-- Itens de pesquisa em alta -->
+            <li><img src="assets/svg/arrow.svg" alt="arrow" /><span>100 pizzas grátis</span></li>
+            <li><img src="assets/svg/arrow.svg" alt="arrow" /><span>receita federal pix imposto</span></li>
+            <li><img src="assets/svg/arrow.svg" alt="arrow" /><span>fotografo brasileiro desaparecido paris</span></li>
+            <li><img src="assets/svg/arrow.svg" alt="arrow" /><span>filmes sessão da tarde hoje</span></li>
+            <li><img src="assets/svg/arrow.svg" alt="arrow" /><span>lula veta pensão vital~icia para crianças com
+                    Zika</span></li>
+            <li><img src="assets/svg/arrow.svg" alt="arrow" /><span>loterias sorteio mega sena</span></li>
+            <li><img src="assets/svg/arrow.svg" alt="arrow" /><span>resultado vestibular</span></li>
+        </ul>
+    </main>
+
+    <!-- Rodapé (footer) com links -->
+    <footer>
+        <p>Brasil</p>
+
+        <nav>
+            <ul>
+                <!-- Links para informações institucionais -->
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Publicidade</a></li>
+                <li><a href="#">Negócios</a></li>
+                <li><a href="#">Como funciona a Pesquisa</a></li>
+            </ul>
+
+            <ul>
+                <!-- Links para política e termos -->
+                <li><a href="#">Privacidade</a></li>
+                <li><a href="#">Termos</a></li>
+                <li><a href="#">Configurações</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <!-- Inclusão do arquivo JavaScript -->
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>
