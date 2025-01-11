@@ -17,7 +17,7 @@ const botaoPesquisaGoogle = document.querySelector('form [type="submit"]');
 
 botaoPesquisaGoogle.addEventListener("click", () => {
 
-    location.href = "https://doodles.google/"
+    location.href = "https://www.google.com/webhp"
 
 });
 
@@ -26,5 +26,3 @@ const Gmail = document.querySelector('nav [class="link-desktop"]');
 Gmail.addEventListener("Click", () => {
     location.href = "https://mail.google.com/mail/u/0/#inbox";
 });
-
-
