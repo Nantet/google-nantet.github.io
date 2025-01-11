@@ -17,7 +17,7 @@ const botaoPesquisaGoogle = document.querySelector('form [type="submit"]');
 
 botaoPesquisaGoogle.addEventListener("click", () => {
 
-    location.href = "https://www.google.com/webhp"
+    location.href = "https://www.youtube.com/"
 
 });
 
